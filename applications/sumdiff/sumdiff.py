@@ -13,3 +13,9 @@ def f(x):
 
 # Your code here
 
+# a = 1
+# b = 3
+# c = 4
+# d = 7
+
+# //

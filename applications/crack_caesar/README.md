@@ -47,7 +47,7 @@ decent result, but they're quite close to the real percentages.)
 |   O    |     8.08   |
 |   H    |     7.71   |
 |   N    |     6.73   |
-|   R    |     6.29   |
+|   R    |     6.29   | 
 |   I    |     5.84   |
 |   S    |     5.56   |
 |   D    |     4.74   |

@@ -1,7 +1,31 @@
 def word_count(s):
-    # Your code here
+    
+    thingy = {};
 
+    #: ; , . - + = / \ | [ ] { } ( ) * ^ &
 
+    if len(s.strip()) <= 0:
+        return thingy;
+
+    s = s.replace('\r', ' ').replace('\t', ' ').replace('\n', ' ');
+
+    for i in s.lower().split(' '):
+        mod = i.replace('"', '').replace(',', '').replace('.', '').replace(':', '').replace(';', '');
+        mod = mod.replace('-', '').replace('+', '').replace('=', '').replace('/', '');
+        mod = mod.replace('\\', '').replace('(', '').replace(')', '').replace('[', '');
+        mod = mod.replace(']', '').replace('|', '').replace('{', '').replace('}', '');
+        mod = mod.replace('*', '').replace('^', '').replace('&', '');
+        # mod = mod.replace('\r', ' ').replace('\t', ' ').replace('\n', ' ');
+        if mod == ' ' or mod == '':
+            continue;
+        if mod in thingy:
+            thingy[mod] = thingy[mod] + 1;
+        else:
+            thingy[mod] = 1;
+
+    print(thingy);
+
+    return thingy;
 
 if __name__ == "__main__":
     print(word_count(""))
